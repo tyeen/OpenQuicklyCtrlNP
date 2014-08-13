@@ -6,9 +6,17 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B16A1859199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */; };
+		B16A185B199AE44900E314D3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A185A199AE44900E314D3 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenQuicklyCtrlNP.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenQuicklyCtrlNP.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16A1851199AE26A00E314D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16A1857199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenQuicklyCtrlNPPlugin.h; sourceTree = "<group>"; };
+		B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenQuicklyCtrlNPPlugin.m; sourceTree = "<group>"; };
+		B16A185A199AE44900E314D3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -16,6 +24,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16A185B199AE44900E314D3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,6 +35,7 @@
 			isa = PBXGroup;
 			children = (
 				B16A184F199AE26A00E314D3 /* OpenQuicklyCtrlNP */,
+				B16A185C199AE44F00E314D3 /* Frameworks */,
 				B16A184E199AE26A00E314D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -33,7 +43,7 @@
 		B16A184E199AE26A00E314D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.bundle */,
+				B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -42,6 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				B16A1850199AE26A00E314D3 /* Supporting Files */,
+				B16A1857199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.h */,
+				B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */,
 			);
 			path = OpenQuicklyCtrlNP;
 			sourceTree = "<group>";
@@ -52,6 +64,14 @@
 				B16A1851199AE26A00E314D3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B16A185C199AE44F00E314D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B16A185A199AE44900E314D3 /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +91,7 @@
 			);
 			name = OpenQuicklyCtrlNP;
 			productName = OpenQuicklyCtrlNP;
-			productReference = B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.bundle */;
+			productReference = B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -120,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16A1859199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +225,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
 				INFOPLIST_FILE = OpenQuicklyCtrlNP/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
@@ -216,11 +239,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
 				INFOPLIST_FILE = OpenQuicklyCtrlNP/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
 		};
