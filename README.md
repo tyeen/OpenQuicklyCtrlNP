@@ -9,7 +9,12 @@ This plug-in gives the Open Quickly the lost control-n/p navigating function.
 * I tested this only on Xcode 5.1 and Xcode 6 beta 5.
 
 ### Installation
-Download the source and build it(`cmd` + `B`) in Xcode. Then restart Xcode.
+You can either
+
+* Use [Alcatraz](http://alcatraz.io/)
+* Download(Clone) the source and build it(`cmd` + `B`) in Xcode.
+
+Then restart Xcode.
 
 ### Uninstallation
 Just delete:
