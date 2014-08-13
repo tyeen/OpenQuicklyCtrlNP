@@ -24,18 +24,24 @@ static NSUInteger kKeyCodeP = 0x23; // decimal: 35
  */
 - (void)_cnp_keyDown:(NSEvent *)theEvent
 {
+    BOOL letsNavigate = NO;
+    NSUInteger targetRow = 0;
+
     BOOL controlKeyPressed = (theEvent.modifierFlags & NSControlKeyMask) != 0;
     if (controlKeyPressed && theEvent.keyCode == kKeyCodeN) {
-        NSUInteger nextRow =
-            self.selectedRow == self.numberOfRows ? self.selectedRow : self.selectedRow + 1;
-        NSIndexSet *newRowIndexes = [NSIndexSet indexSetWithIndex:nextRow];
-        [self selectRowIndexes:newRowIndexes byExtendingSelection:NO];
-        [self scrollRowToVisible:nextRow];
+        // next row
+        targetRow = self.selectedRow == self.numberOfRows ? self.selectedRow : self.selectedRow + 1;
+        letsNavigate = YES;
     } else if (controlKeyPressed && theEvent.keyCode == kKeyCodeP) {
-        NSUInteger prevRow = self.selectedRow == 0 ? 0 : self.selectedRow - 1;
-        NSIndexSet *newRowIndexes = [NSIndexSet indexSetWithIndex:prevRow];
-        [self selectRowIndexes:newRowIndexes byExtendingSelection:NO];
-        [self scrollRowToVisible:prevRow];
+        // previous row
+        targetRow = self.selectedRow == 0 ? 0 : self.selectedRow - 1;
+        letsNavigate = YES;
+    }
+
+    if (letsNavigate) {
+        NSIndexSet *rowIndexes = [NSIndexSet indexSetWithIndex:targetRow];
+        [self selectRowIndexes:rowIndexes byExtendingSelection:NO];
+        [self scrollRowToVisible:targetRow];
     } else {
         [self _cnp_keyDown:theEvent];
     }
