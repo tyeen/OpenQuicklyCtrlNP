@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B16A1859199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */; };
 		B16A185B199AE44900E314D3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A185A199AE44900E314D3 /* Cocoa.framework */; };
+		B1BCE2CE199AE666003722CE /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BCE2CD199AE666003722CE /* NSObject+Swizzle.m */; };
+		B1BCE2D3199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BCE2D2199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.m */; };
+		B1BCE2D5199AE88D003722CE /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BCE2D4199AE88D003722CE /* IDEKit.framework */; };
+		B1BCE2D7199AE8A0003722CE /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BCE2D6199AE8A0003722CE /* DVTKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B16A184D199AE26A00E314D3 /* OpenQuicklyCtrlNP.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenQuicklyCtrlNP.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16A1851199AE26A00E314D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B16A1857199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenQuicklyCtrlNPPlugin.h; sourceTree = "<group>"; };
-		B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenQuicklyCtrlNPPlugin.m; sourceTree = "<group>"; };
 		B16A185A199AE44900E314D3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B1BCE2CC199AE666003722CE /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		B1BCE2CD199AE666003722CE /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		B1BCE2CF199AE6F5003722CE /* IDEOpenQuicklyTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEOpenQuicklyTableView.h; sourceTree = "<group>"; };
+		B1BCE2D0199AE747003722CE /* DVTTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTTableView.h; sourceTree = "<group>"; };
+		B1BCE2D1199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEOpenQuicklyTableView+CtrlNP.h"; sourceTree = "<group>"; };
+		B1BCE2D2199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEOpenQuicklyTableView+CtrlNP.m"; sourceTree = "<group>"; };
+		B1BCE2D4199AE88D003722CE /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		B1BCE2D6199AE8A0003722CE /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = ../../../../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +34,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16A185B199AE44900E314D3 /* Cocoa.framework in Frameworks */,
+				B1BCE2D5199AE88D003722CE /* IDEKit.framework in Frameworks */,
+				B1BCE2D7199AE8A0003722CE /* DVTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +62,12 @@
 		B16A184F199AE26A00E314D3 /* OpenQuicklyCtrlNP */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCE2CB199AE604003722CE /* Xcode Headers */,
+				B1BCE2CC199AE666003722CE /* NSObject+Swizzle.h */,
+				B1BCE2CD199AE666003722CE /* NSObject+Swizzle.m */,
+				B1BCE2D1199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.h */,
+				B1BCE2D2199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.m */,
 				B16A1850199AE26A00E314D3 /* Supporting Files */,
-				B16A1857199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.h */,
-				B16A1858199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m */,
 			);
 			path = OpenQuicklyCtrlNP;
 			sourceTree = "<group>";
@@ -69,9 +83,20 @@
 		B16A185C199AE44F00E314D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCE2D6199AE8A0003722CE /* DVTKit.framework */,
+				B1BCE2D4199AE88D003722CE /* IDEKit.framework */,
 				B16A185A199AE44900E314D3 /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1BCE2CB199AE604003722CE /* Xcode Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCE2CF199AE6F5003722CE /* IDEOpenQuicklyTableView.h */,
+				B1BCE2D0199AE747003722CE /* DVTTableView.h */,
+			);
+			name = "Xcode Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16A1859199AE3FB00E314D3 /* OpenQuicklyCtrlNPPlugin.m in Sources */,
+				B1BCE2D3199AE799003722CE /* IDEOpenQuicklyTableView+CtrlNP.m in Sources */,
+				B1BCE2CE199AE666003722CE /* NSObject+Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +253,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks",
+				);
 				INFOPLIST_FILE = OpenQuicklyCtrlNP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -241,6 +272,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks",
+				);
 				INFOPLIST_FILE = OpenQuicklyCtrlNP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,6 +304,7 @@
 				B16A1856199AE26A00E314D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

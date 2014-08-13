@@ -4,7 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IDEOpenQuicklyTableView.h"
 
-@interface OpenQuicklyCtrlNPPlugin : NSObject
+@interface IDEOpenQuicklyTableView (CtrlNP)
 
 @end
