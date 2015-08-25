@@ -28,15 +28,17 @@ static NSUInteger kKeyCodeP = 0x23; // decimal: 35
     NSUInteger targetRow = 0;
 
     BOOL controlKeyPressed = (theEvent.modifierFlags & NSControlKeyMask) != 0;
-    if (controlKeyPressed && theEvent.keyCode == kKeyCodeN) {
-        // next row
-        targetRow = (self.selectedRow == self.numberOfRows - 1) ?
+    if (self.selectedRow != -1) {
+        if (controlKeyPressed && theEvent.keyCode == kKeyCodeN) {
+            // next row
+            targetRow = (self.selectedRow == self.numberOfRows - 1) ?
             self.selectedRow : self.selectedRow + 1;
-        letsNavigate = YES;
-    } else if (controlKeyPressed && theEvent.keyCode == kKeyCodeP) {
-        // previous row
-        targetRow = (self.selectedRow == 0) ? 0 : self.selectedRow - 1;
-        letsNavigate = YES;
+            letsNavigate = YES;
+        } else if (controlKeyPressed && theEvent.keyCode == kKeyCodeP) {
+            // previous row
+            targetRow = (self.selectedRow == 0) ? 0 : self.selectedRow - 1;
+            letsNavigate = YES;
+        }
     }
 
     if (letsNavigate) {
