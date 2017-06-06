@@ -1,3 +1,7 @@
+## DEPRECATED.
+
+## Because Xcode 9 has built in this feature :D 🎉
+
 ### NOTE
 Since Xcode 8, all third party plug-ins are prohibited. This plug-in won't work by default on
 Xcode version higher than 8. There are some ways to workaround it, but for security reasons,
